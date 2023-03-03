@@ -5,40 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+  <link rel="stylesheet" href="assets/styles.css">  
+  <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  
-  <header>
-    <div><img src="images/logo.svg" alt=""></div>
-  </header>
 
   <main>
-    <div>
-      <img src="images/illustration-mockups.svg" alt="">
-    </div>
     <section>
-      <h1>Build The Community Your Fans Will Love</h1>
-      <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-        Create connections with your users as you engage in genuine discussion.</p> 
-      <a href="">Register</a>
+      <h1>Get <span>insights</span> that help your business grow.</h1>
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.</p>
+      <div>
+        <div class="info">
+          <p class="info__text info__text--superior">10k+</p>
+          <p class="info__text">companies</p>
+        </div>
+        <div class="info">
+          <p class="info__text info__text--superior">314</p>
+          <p class="info__text">templates</p>
+        </div>
+        <div class="info">
+          <p class="info__text info__text--superior">12m+</p>
+          <p class="info__text">queries</p>
+        </div>
+      </div>  
     </section>
+    
+    <div class="img-section">
+      <div class="img-float" role="img">
+      </div>
+    </div>
   </main>
-  
-  <div class="social-links">
-    <a href=""><img src="images/facebook.png" alt="fb-icon"></a>
-    <a href=""><img src="images/twitter.png" alt="twitter-icon"></a>
-    <a href=""><img src="images/instagram.png" alt="instagram-icon"></a>
-  </div>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">José Alfredo Mário Dos Santos</a>.
-    </p>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">José Alfredo Mário Dos Santos</a>.
   </footer>
 </body>
 </html>

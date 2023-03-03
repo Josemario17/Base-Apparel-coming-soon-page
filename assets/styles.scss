@@ -1,0 +1,172 @@
+
+
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: Deca;
+    src: url('../fonts/LexendDeca-Regular.ttf');
+}
+
+@mixin responsive{
+    width: 100%;
+    margin: 1% 0;
+}
+
+
+.attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 100%); font-family: Deca;}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+
+body{
+    min-width: 375px;
+    height: 100%;
+    padding: 10%;
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: hsl(244, 38%, 16%);
+    color: hsla(0, 0%, 100%, 0.6);
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+
+    @media (max-width: 1000px) {
+        height: 100%;
+        flex-wrap: wrap-reverse;
+
+        div{
+            @include responsive();
+        }
+    }
+
+}
+
+section{
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+    @media (max-width: 1000px) {
+        @include responsive();
+    }
+}
+
+section p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    font-family: Deca;
+}
+
+
+h1{
+    width: 90%;
+    font-size: 2.8em;  
+    margin: 2% 0; 
+    
+    @media (max-width: 1000px) {
+        @include responsive();
+        text-align: center;
+    }
+}
+
+h1 + p{
+    width: 80%;
+    padding: 5% 0;
+    line-height: 25px;
+    @media (max-width: 1000px) {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+:is(h1, .info__text--superior){
+    font-family: Inter;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+h1 span{
+    color: hsl(277, 64%, 61%);
+}
+
+h1 + p + div{
+    width: 90%;
+    padding-top: 12%;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    text-transform: uppercase;
+    @media (max-width: 1000px) {
+        @include responsive();
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info *{
+    padding: 0;
+    margin: 0;
+}
+
+.info__text--superior{
+    font-size: 1.75em;
+}
+
+.img-section{
+    width: 50%;
+    overflow: hidden;
+    @media (max-width: 1000px) {
+        @include responsive();
+        margin-top: -5px;
+    }
+}
+.img-float{
+    width: 100%;
+    height: 100%;
+    background: url('../images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 1000px) {
+        background: url(../images/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.img-float::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 100%, 24%, 0.667);
+    opacity: 100%;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      height: 100%;
+    }
+}
