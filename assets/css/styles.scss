@@ -75,9 +75,9 @@ main .block:nth-child(1){
 
 main .block:nth-child(2){
     padding: 4%; 
+    padding-bottom: 0;
     @media (max-width: 1000px) {
         padding: 4% 8%;
-        padding-bottom: 0;
     }
 }
 
