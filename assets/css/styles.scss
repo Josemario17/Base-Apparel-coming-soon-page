@@ -48,6 +48,7 @@ main{
     gap: 0;
     background-color: white;
     border-radius: 12px;
+    overflow-x: hidden;
     
     @media (max-width: 1000px) {
         @include response();
