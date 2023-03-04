@@ -1,0 +1,245 @@
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: font;
+    src: url('../font/Manrope-Regular.ttf');
+    font-weight: 500;
+    font-size: 13px;
+}
+
+@mixin response{
+    width: 100%;
+    height: auto;
+}
+
+@mixin response-flex{
+    flex-direction: column;
+}
+
+input{
+    display: none;
+}
+
+*{
+    font-family: font;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 375px;
+    max-width: 1440px;
+    height: 100vh;
+    padding: 14% 20%;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(214, 17%, 51%);
+}
+
+main{
+    margin: 0 auto;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    background-color: white;
+    border-radius: 12px;
+    
+    @media (max-width: 1000px) {
+        @include response();
+        @include response-flex();
+        overflow: hidden;
+    }
+}
+
+main .block{
+    width: 60%;
+     @media (max-width: 1000px) {
+        @include response();
+        @include response-flex();
+    }
+
+}
+
+main .block:nth-child(1){
+    width: 40%;
+    @media (max-width: 1000px) {
+        @include response();
+    }
+}
+
+main .block:nth-child(2){
+    padding: 4%; 
+    @media (max-width: 1000px) {
+        padding: 4% 8%;
+        padding-bottom: 0;
+    }
+}
+
+main .block .block__element--img{
+    width: 100%;
+    height: 100%;
+}
+
+.block__element--p{
+    padding: 2% 0;
+    width: 100%;
+    @media (max-width: 1000px) {
+        width: 93%;
+    }
+}
+
+.block .block__element--p:nth-child(1){
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: .5px;
+    line-height: 27px;
+    color: hsl(217, 19%, 35%);
+}
+
+.block__element{
+    width: 100%;
+    height: 28%;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+    
+    @media (max-width: 1000px) {
+           margin-top: 3%;
+           padding-bottom: 8%; 
+
+           .btn{
+            z-index: 50;
+           }
+    }
+}
+
+.block__element--div{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.block__element--div:nth-child(2){
+    position: relative;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    label{
+        cursor: pointer;
+        width: 39px;
+        height: 39px;
+        background-color: #eef0f6;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover{
+            background-color: hsla(214, 17%, 51%, 0.57);
+            
+        }
+    }
+}
+
+.element__div{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .element__div--img{
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.block__element--div .element__div:nth-child(2){
+    width: 70%;
+    align-items: start;
+    
+    .element__div--p{
+        letter-spacing: 0px;
+    }
+
+    .is-name{
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
+    }
+}
+
+
+.hover-div-show{
+    z-index: 25;
+    position: absolute;
+    top: -60px;
+    right: -80px;
+    width: 200px;
+    height: 40px;
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 3%;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: .5s ease-in, display;
+    box-shadow: 1px 5px 15px 5px rgba(147, 146, 146, 0.18);
+    img{
+        width: 15px;
+        height: 15px;
+    }
+
+    @media (max-width: 1000px) {
+        width: 370px;
+        height: 80px;
+        right: -33px;
+        padding-left: 50px;
+        top: 0;
+        justify-content: start;
+
+        &::after{
+            content: "";
+            right: 1000px;
+            border: 0;
+            width: 0;
+        }
+    }
+}
+
+.hover-div-show::after{
+    content: "";
+    display: block;
+    top: 25px;
+    transform: rotate(-90deg);
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-right: 20px solid hsl(217, 19%, 35%);
+    border-bottom: 20px solid transparent;
+}
+
+
+input:checked ~ .hover-div-show{
+    display: flex;
+}
+
+input:checked ~ label{
+    background-color: hsla(214, 17%, 51%, 0.57);
+    @media (max-width: 1000px) {
+        margin-top: 17px;
+        background-color: #eef0f6;
+    }
+}
+
