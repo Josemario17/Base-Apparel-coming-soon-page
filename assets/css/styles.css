@@ -27,7 +27,6 @@ input {
 body {
   min-width: 375px;
   max-width: 1440px;
-  height: 100vh;
   padding: 14% 20%;
   background-color: hsl(210, 46%, 95%);
   color: hsl(214, 17%, 51%);
@@ -75,7 +74,6 @@ main .block:nth-child(1) {
 
 main .block:nth-child(2) {
   padding: 4%;
-  padding-bottom: 0;
 }
 @media (max-width: 1000px) {
   main .block:nth-child(2) {
