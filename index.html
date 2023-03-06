@@ -2,53 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
-   <link rel="stylesheet" href="assets/css/styles.css"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
-
-  <main>
-    <div class="block">
-        <img src="images/drawers.jpg" alt="" class="block__element--img">
+  <header>
+    <div>
+      <img src="assets/images/logo.svg" alt="W-logo">
     </div>
-    <section class="block">
-      <p class="block__element--p">Shift the overall look and feel by <br> adding these wonderful 
-        touches to furniture in your home</p>
-      <p class="block__element--p">Ever been in a room and felt like something was missing? Perhaps 
-          it felt slightly bare and uninviting. I’ve got some simple tips 
-          to help you make any room feel complete.</p>
-      <div class="block__element">
-        <div class="block__element--div">
-          <div class="element__div">
-            <img src="images/avatar-michelle.jpg" alt="avatar" class="element__div--img">
-          </div>
-          <div class="element__div">  
-            <p class="element__div--p is-name">Michelle Appleton</p>
-            <p class="element__div--p">28 Jun 2020</p>
-          </div>
+      <button value="toggle"><img src="assets/images/icon-menu.svg" alt=""></button>
+      <input type="checkbox" name="t-check" id="t-check">
+    <nav>
+      <ul>
+        <button value="close"><img src="assets/images/icon-menu-close.svg" alt=""></button>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>  
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li> 
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <div class="aside__element">
+        <picture>
+          <source media="(min-width:900px)" srcset="assets/images/image-web-3-desktop.jpg">
+          <source media="(min-width:650px)" srcset="assets/images/image-web-3-mobile.jpg">
+          <img src="assets/images/image-web-3-desktop.jpg" alt="picture">
+        </picture>
+      </div>
+      <section class="aside__element">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <div class="set-text">
+          <p class="set-tex__element">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+          <a href="#" role="button" class="set-tex__btn">Read more</a>
         </div>
-        <div class="block__element--div">
-          <input type="checkbox" name="t-check" id="t-check">
-          <label for="t-check" " class="btn" ><img src="images/icon-share.svg" alt="icon-share" role="button"></label>
-          <div class="hover-div-show">
-            <p>share</p>
-            <img src="images/icon-facebook.svg" alt="icon-facebook">
-            <img src="images/icon-twitter.svg" alt="icon-twitter">
-            <img src="images/icon-pinterest.svg" alt="">
-          </div>
-        </div>
+      </section>
+    </aside>
+    <aside>
+      <h2>New</h2> 
+      <section>
+        <a href="#" class="sub-title">Hydrogen VS Electric Cars</a>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+     </section>
+      <section>
+      <a href="#" class="sub-title">The Downsides of AI Artistry</a>
+      <p>What are the possible adverse effects of on-demand AI image generation?</p>
+    </section>
+      <section>
+        <a href="#" class="sub-title">Is VC Funding Drying Up?</a>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p></section>
+    </aside>
+  </main>
+  <article>
+    <section>
+      <div>      
+        <img src="assets/images/image-retro-pcs.jpg" alt="image-retro-pcs" class="img-spn">
+      </div>
+      <div>
+        <span>01</span>
+        <a href="#" class="sub-title">Reviving Retro PCs</a>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </section>  
+    <section>
+      <div>
+        <img src="assets/images/image-top-laptops.jpg" alt="image-top-laptops" class="img-spn">
+      </div>
+      <div>
+        <span>02</span>
+        <a  href="#" class="sub-title">Top 10 Laptops of 2022</a>
+        <p>Our best picks for various needs and budgets.</p>
       </div>
     </section>
-  </main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">José Alfredo Mário Dos Santos</a>.
-  </div>
+    <section>   
+        <div>
+          <img src="assets/images/image-gaming-growth.jpg" alt="image-gaming-growth" class="img-spn">
+        </div>
+        <div>
+          <span>03</span>
+          <a  href="#" class="sub-title">The Growth of Gaming</a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+    </section>
+  </article>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>  
+  </footer>
 </body>
+<script src="assets/js/script.js"></script>
 </html>
