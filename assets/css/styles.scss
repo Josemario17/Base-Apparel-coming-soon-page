@@ -1,312 +1,74 @@
 @font-face {
-    font-family: Font;
-    src: url('../fonts/static/Inter-Regular.ttf');
-    font-weight: 400;
+    font-family: font1;
+    src: url('../font/RedHatDisplay-Regular.ttf');
+    font-weight: 500;
 }
 
 @font-face {
-    font-family: fBold;
-    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf');
-    font-weight: 800;
+    font-family: fBlack;
+    src: url('../font/RedHatDisplay-Black.ttf');
 }
-@mixin center{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.attribution {font-size: 11px; text-align: center;}
-.attribution a {color: hsl(228, 45%, 44%);}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body{
     min-width: 375px;
-    max-width: 1440px;
-    padding: 3% 8%;
-    margin: 0 auto;
-    font: 15px Font;
-    color: hsl(236, 13%, 42%);
+    width: 1440px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: url('../../images/pattern-background-desktop.svg') no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
+    color: hsl(224, 23%, 55%);
+    font-size: 16px;
+    font-family: font1;
 }
 
-li, a{
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-}
-
-:is(header, main, footer){
-    width: 100%;
-    height: 100%;
-    padding: 2% 0%;
-    @include center();
-}
-
-:is(h1, h2, .sub-title){
-    font-family: fBold;
-}
-
-header{
-    position: relative;
-    justify-content: space-between;
-    div{
-        width: 50%;
-    }
-    nav{
-        width: 50%;
-        ul{
-            @include center();
-            gap: 2.5em;
-            justify-content: flex-end;
-            a:hover{
-                color: hsl(5, 85%, 63%);
-            }
-            
-            @media (max-width: 1000px) {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        button{
-            display: none;
-        }
-        @media (max-width: 1000px) {
-            button{
-                display: block;
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-                margin: 0 auto;
-            }
-            display: none;
-            padding: 4% 12%;
-            width: 80%;
-            height: 100vh;
-            top: 1%;
-            right: -38px;
-            position: absolute;
-            background-color: hsl(36, 100%, 99%);
-        }
-    }
-    
-    button{
-        display: none;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
-        
-
-        @media (max-width: 1000px) {
-                display: block;
-        }
+body .container{
+    width: 28%;
+    background-color: hsl(225, 100%, 98%);
+    @media (max-width:900px) {
+        width: 85%;
+        height: 650px;
     }
 }
-main{
-    @include center();
-    align-items: normal;
-    gap: 3%;   
-    aside:nth-child(1){
-        width: 67%;
-        height: 100%;  
-        display: grid;
-        gap: 3%;
-        
-    @media (max-width: 1000px) {
-        width: 100%;
-    }
-    }
-    aside:nth-child(2){
-        margin-top: 8px;
-        width: 30%;
-        background-color: hsl(240, 100%, 5%);
-        padding: 3% 2%;
-        display: flex;
-        flex-direction: column;
-        gap: 3%;
-            
-        @media (max-width: 1000px) {
-            width: 100%;
-            margin: 50px auto;
-        }
-        h2{
-            font-size: 2.8em;
-            font-family: Font;
-            font-weight: 800;
-            color: hsl(35, 77%, 62%);
-        }
-        section{
-            padding: 3% 0;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 16px;
-            .sub-title{
-                font-size: 1.2em;
-                color:hsl(36, 100%, 99%);
 
-                &:hover{
-                    color: hsl(35, 77%, 62%);
-                }
-            }
-
-            .sub-title + p{
-                line-height: 28px;
-                color: hsl(233, 8%, 79%);
-            }
-
-        }
-        section:not(:last-of-type){
-            padding-bottom: 30px;
-            border-bottom: 1px solid hsl(236, 13%, 42%);
-        }
-    }
-
-    @media (max-width: 1000px) {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
+body main h1, .annual-p{
+    color: hsl(223, 47%, 23%);
+    font-family: fBlack;
 }
-aside:nth-child(1) :is(div, div img){
-    width: 100%;
+
+main p + div{
+    background-color: hsla(225, 100%, 94%, 0.347);
 }
-.aside__element{
-    margin: 1.1% 0;
-}
-.aside__element:nth-child(2){
-    @include center();
-    align-items: normal;
-    justify-content: space-between;
-    gap: 1%;
-    h1{
-        width: 42%;
-        letter-spacing: 1px;
-        font-family: fBold;
-        font-weight: 800;
-        font-size: 3.4em;
-        color: hsl(240, 100%, 5%);
 
-    }
+main .flex a{
+    color: hsl(245, 75%, 52%);
+    font-family: fBlack;
 
-    .set-text{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    
-    @media (max-width: 1000px) {
-        width: 100%;
-        flex-direction: column;
-
-        h1, .set-text{
-            width: 100%;
-            margin: 15px 0;
-        }
-
-        .set-text{
-            gap: 25px;
-        }
-    }
-}
-.set-tex__element{
-    width: 100%;
-    display: flex;
-    letter-spacing: 1px;
-    line-height: 25px;
-    justify-content: flex-end;
-}
-.set-tex__btn{
-    width: 50%;
-    background-color: hsl(5, 85%, 63%);
-    height: 50px;
-    color: hsl(36, 100%, 99%);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-    justify-content: center;
-    @include center();
     &:hover{
-        background-color: hsl(240, 100%, 5%)
+        text-decoration: none;
+        color: hsla(245, 75%, 52%, 0.611);
     }
 }
-article{
-    @include center();
-    margin: 3% 0;
-    @media (max-width: 1000px) {
-        width: 100%;
-        flex-direction: column;
-    }
-    section{
-        width: 35%;
-        @include center();
-        align-items: normal;
-        justify-content: space-between;
-        gap: 20px;
-        div:nth-child(1){
-            width: 30%;
-            .img-spn{
-                width: 100%;
-            }
-        }
-        
-        div{
-            width: 70%;
-            height: 100%;
-            span{
-                display: block;
-                padding: 2% 0;
-                font-family: fBold;
-                font-size: 2.6em;
-                color: hsl(233, 8%, 79%);
-            }
 
-            p{
-                margin: 4% 0;
-            }
-            .sub-title{
-                color: hsl(240, 100%, 5%);
-                font-family: fBold;
-                font-size: 19px;
-                font-weight: 700;
+main a[role="button"]{
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
 
-                &:hover{
-                    color: hsl(5, 85%, 63%);
-                }
-            }
-            .sub-title + p{
-                width: 85%;
-                line-height:25px;
-            }
-        }
-        @media (max-width: 1000px) {
-            width: 100%;
-            margin: 20px auto;
+    & + a{
+        color: hsl(224, 23%, 55%);
+        font-weight: 900;
+
+        &:hover{
+            color: hsl(223, 47%, 23%);
         }
     }
-    
-}
 
-footer{
-    @include center();
-    justify-content: center;
-}
-
-input{
-    display: none;
-}
-
-
-
-@media (max-width: 900px) {  
-    input:checked ~ nav{
-        display: block;
-    }  
-    input ~ nav{
-        display: none;
+    &:hover{
+        background-color: hsla(245, 75%, 52%, 0.611);
+        color: hsl(225, 100%, 98%);
     }
 }
+

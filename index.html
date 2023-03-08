@@ -3,98 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <title>Frontend Mentor | News homepage</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Order summary card</title>
 </head>
-<body>
-  <header>
-    <div>
-      <img src="assets/images/logo.svg" alt="W-logo">
+<body class="py-12 w-screen h-screen">
+  <div class="h-full mx-auto rounded-2xl overflow-hidden container">
+    <header class=" shrink w-full">
+      <img src="images/illustration-hero.svg" alt="illustration-hero" class=" shrink w-full">
+    </header>
+    <main class="px-12 py-4">
+     <h1 class="text-3xl text-center py-6 ">Order Summary</h1>
+     <p class="text-center mb-6">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+    <div class="px-6 py-6 rounded-2xl flex justify-between">
+      <div class=" shrink w-2/3 flex items-center justify-center gap-4">
+        <div class=" shrink w-/2">
+          <img src="images/icon-music.svg" alt="icon-music">
+        </div>
+        <div class=" shrink w-2/3">
+          <p class="font-bold annual-p">Annual Plan</p>
+          <p>$59.99/year</p>
+        </div>
+      </div>
+      <a href="#" class=" shrink w-1/2 h-92 flex items-center justify-end underline">Change</a>
     </div>
-      <button value="toggle"><img src="assets/images/icon-menu.svg" alt=""></button>
-      <input type="checkbox" name="t-check" id="t-check">
-    <nav>
-      <ul>
-        <button value="close"><img src="assets/images/icon-menu-close.svg" alt=""></button>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>  
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li> 
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <aside>
-      <div class="aside__element">
-        <picture>
-          <source media="(min-width:900px)" srcset="assets/images/image-web-3-desktop.jpg">
-          <source media="(min-width:650px)" srcset="assets/images/image-web-3-mobile.jpg">
-          <img src="assets/images/image-web-3-desktop.jpg" alt="picture">
-        </picture>
-      </div>
-      <section class="aside__element">
-        <h1>The Bright Future of Web 3.0?</h1>
-        <div class="set-text">
-          <p class="set-tex__element">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-          <a href="#" role="button" class="set-tex__btn">Read more</a>
-        </div>
-      </section>
-    </aside>
-    <aside>
-      <h2>New</h2> 
-      <section>
-        <a href="#" class="sub-title">Hydrogen VS Electric Cars</a>
-        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-     </section>
-      <section>
-      <a href="#" class="sub-title">The Downsides of AI Artistry</a>
-      <p>What are the possible adverse effects of on-demand AI image generation?</p>
-    </section>
-      <section>
-        <a href="#" class="sub-title">Is VC Funding Drying Up?</a>
-        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p></section>
-    </aside>
-  </main>
-  <article>
-    <section>
-      <div>      
-        <img src="assets/images/image-retro-pcs.jpg" alt="image-retro-pcs" class="img-spn">
-      </div>
-      <div>
-        <span>01</span>
-        <a href="#" class="sub-title">Reviving Retro PCs</a>
-        <p>What happens when old PCs are given modern upgrades?</p>
-      </div>
-    </section>  
-    <section>
-      <div>
-        <img src="assets/images/image-top-laptops.jpg" alt="image-top-laptops" class="img-spn">
-      </div>
-      <div>
-        <span>02</span>
-        <a  href="#" class="sub-title">Top 10 Laptops of 2022</a>
-        <p>Our best picks for various needs and budgets.</p>
-      </div>
-    </section>
-    <section>   
-        <div>
-          <img src="assets/images/image-gaming-growth.jpg" alt="image-gaming-growth" class="img-spn">
-        </div>
-        <div>
-          <span>03</span>
-          <a  href="#" class="sub-title">The Growth of Gaming</a>
-          <p>How the pandemic has sparked fresh opportunities.</p>
-        </div>
-    </section>
-  </article>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>  
-  </footer>
+      
+    <div class="mt-8 flex flex-col justify-center gap-6">
+      <a href="#" class="rounded-xl py-3 flex items-center justify-center w-full shadow-2xl" role="button">Proceed to Payment</a>
+      <a href="#" class="w-full flex items-center justify-center">Cancel Order</a>
+    </div>
+    
+</main>
+    
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
 </body>
-<script src="assets/js/script.js"></script>
 </html>
