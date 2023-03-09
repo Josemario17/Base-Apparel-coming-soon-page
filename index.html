@@ -3,44 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Frontend Mentor | Order summary card</title>
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
-<body class="py-12 w-screen h-full flex flex-col items-center">
-  <div class="mx-auto rounded-2xl overflow-hidden container">
-    <header class=" shrink w-full">
-      <img src="images/illustration-hero.svg" alt="illustration-hero" class=" shrink w-full">
-    </header>
-    <main class="px-12 py-4">
-     <h1 class="text-3xl text-center py-6 ">Order Summary</h1>
-     <p class="text-center mb-6">You can now listen to millions of songs, audiobooks, and podcasts on any 
-        device anywhere you like!</p>
-    <div class="px-6 py-6 rounded-2xl flex justify-between">
-      <div class=" shrink w-3/4 flex items-center justify-center gap-4">
-        <div>
-          <img src="images/icon-music.svg" alt="icon-music">
-        </div>
-        <div>
-          <p class="font-bold annual-p">Annual Plan</p>
-          <p>$59.99/year</p>
+<body>
+  <header>
+    <div class="block-top">
+      <div class="block-top__element">
+        <img src="images/logo.svg" alt="logo-sunnyside">
+      </div>
+      <div class="block-top__element--setoff-desktop">
+        <label for="t-check"><img src="images/icon-hamburger.svg" alt="icon-hamburger"></label for>
+      </div>
+      <input type="checkbox" name="" id="t-check">
+        <nav class="block-top__element">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#" role="button">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+    
+    <div class="block-down">
+      <h1 class="block-down__element--text">We are creatives</h1>
+    </div>
+
+    <div class="block-down">
+      <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" class="block-down__element--img">
+    </div>
+  </header>
+
+  <main>
+    <section>  
+      <div class="section__element is-div-text">
+        <h2>Transform your brand</h2>
+        <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <div class="section__element-__div">
+          <a href="#">Learn more</a>
         </div>
       </div>
-      <a href="#" class=" shrink w-1/2 h-92 flex items-center justify-end underline">Change</a>
-    </div>
+      <div class="section__element">
+        <img src="images/desktop/image-transform.jpg" alt="image-transform">
+      </div>
+    </section>
+
+    <section>
+      <div class="section__element">
+        <img src="images/desktop/image-stand-out.jpg" alt="">
+      </div>
+      <div class="section__element is-div-text">
+        <h2>Stand out to the right audience</h2>
+        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+       <div class="section__element-__div is-last-div">
+        <a href="#">Learn more</a>
+       </div>
+      </div>
+    </section>
+    <section>
+      <div class="section__element--modifier">
+        <div>
+          <h3>Graphic design</h3>
+          <p> Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>  
+      </div>
       
-    <div class="mt-8 flex flex-col justify-center gap-6 pb-4">
-      <a href="#" class="rounded-xl py-3 flex items-center justify-center w-full shadow-2xl" role="button">Proceed to Payment</a>
-      <a href="#" class="w-full flex items-center justify-center">Cancel Order</a>
+      <div class="section__element--modifier">
+        <div>  
+          <h3>Photography</h3>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+      </div>
+    </section>
+    
+    <article>
+      <h3>Client testimonials</h3>
+
+      <div class="testimonials">
+        <div class="testimonials__element">
+          <img src="images/image-emily.jpg" alt="image-emily">
+          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+          <div class="testimonials__element--text">
+            <p class="testimonials__element--name">Emily R.</p>
+            <p class="testimonials__element--prof">Marketing Director</p>
+          </div>  
+        </div>
+
+        <div class="testimonials__element">
+          <img src="images/image-thomas.jpg" alt="image-thomas">
+          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+          <div class="testimonials__element--text">
+            <p class="testimonials__element--name">Thomas S.</p>
+            <p class="testimonials__element--prof">Chief Operating Officer</p>
+          </div>  
+        </div>
+
+        <div class="testimonials__element">
+          <img src="images/image-jennie.jpg" alt="image-jennie">
+          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+          <div class="testimonials__element--text">
+            <p class="testimonials__element--name">Jennie F.</p>
+            <p class="testimonials__element--prof">Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="gallery">
+      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles">
+      <img src="images/desktop/image-gallery-orange.jpg" alt="image-gallery-orange">
+      <img src="images/desktop/image-gallery-cone.jpg" alt="image-gallery-cone">
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="image-gallery-sugarcubes">
     </div>
-    
-</main>
-    
-  </div>
+  </main>
+  <footer>
+    <div class="footer-img-logo">
+      <img src="images/logo.svg" alt="logo" class="footer-img-logo__element">
+    </div>  
+    <ul>
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Projects</a></li>
+    </ul>
+    <div class="list-socials">
+      <a href=""><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
+      <a href=""><img src="images/icon-instagram.svg" alt="icon-instagram"></a>
+      <a href=""><img src="images/icon-twitter.svg" alt="icon-twitter"></a>
+      <a href=""><img src="images/icon-pinterest.svg" alt="icon-pinterest"></a>
+    </div>
+  </footer>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jose Mário Dos Santos</a>.
+    Coded by <a href="#">José Alfredo Mário Dos Santos</a>.
   </div>
 </body>
+<script src="assets/javascript/script.js"></script>
 </html>
