@@ -3,142 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="assets/css/style.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Mentor | NFT preview card component</title>
+
 </head>
 <body>
-  <header>
-    <div class="block-top">
-      <div class="block-top__element">
-        <img src="images/logo.svg" alt="logo-sunnyside">
-      </div>
-      <div class="block-top__element--setoff-desktop">
-        <label for="t-check"><img src="images/icon-hamburger.svg" alt="icon-hamburger"></label for>
-      </div>
-      <input type="checkbox" name="" id="t-check">
-        <nav class="block-top__element">
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#" role="button">Contact</a></li>
-          </ul>
-        </nav>
-    </div>
-    
-    <div class="block-down">
-      <h1 class="block-down__element--text">We are creatives</h1>
-    </div>
-
-    <div class="block-down">
-      <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" class="block-down__element--img">
-    </div>
-  </header>
 
   <main>
-    <section>  
-      <div class="section__element is-div-text">
-        <h2>Transform your brand</h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <div class="section__element-__div">
-          <a href="#">Learn more</a>
-        </div>
-      </div>
-      <div class="section__element">
-        <img src="images/desktop/image-transform.jpg" alt="image-transform">
-      </div>
-    </section>
-
-    <section>
-      <div class="section__element">
-        <img src="images/desktop/image-stand-out.jpg" alt="">
-      </div>
-      <div class="section__element is-div-text">
-        <h2>Stand out to the right audience</h2>
-        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-       <div class="section__element-__div is-last-div">
-        <a href="#">Learn more</a>
-       </div>
-      </div>
-    </section>
-    <section>
-      <div class="section__element--modifier">
+    <div class="main_element">
+      <a href="#" class="main_element--a">
         <div>
-          <h3>Graphic design</h3>
-          <p> Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
-        </div>  
-      </div>
-      
-      <div class="section__element--modifier">
-        <div>  
-          <h3>Photography</h3>
-          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
         </div>
+        <img src="images/icon-view.svg" alt="icon-view" class="no-viwe">
+      </a>
+    </div>  
+    <section class="main_element is-content-info">
+      <a href="#"><h2>Equilibrium #3429</h2></a>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="main_element__text-div">
+        <p><img src="images/icon-ethereum.svg" alt="icon-ethereum"> 0.041 ETH</p>
+        <p> <img src="images/icon-clock.svg" alt="icon-clock"> 3 days left</p>
+      </div>
+      <div class="main_element__info-div">  
+        <img src="images/image-avatar.png" alt="">
+        <p>Creation of <a href="#">Jules Wyvern</a></p>
       </div>
     </section>
-    
-    <article>
-      <h3>Client testimonials</h3>
 
-      <div class="testimonials">
-        <div class="testimonials__element">
-          <img src="images/image-emily.jpg" alt="image-emily">
-          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <div class="testimonials__element--text">
-            <p class="testimonials__element--name">Emily R.</p>
-            <p class="testimonials__element--prof">Marketing Director</p>
-          </div>  
-        </div>
-
-        <div class="testimonials__element">
-          <img src="images/image-thomas.jpg" alt="image-thomas">
-          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <div class="testimonials__element--text">
-            <p class="testimonials__element--name">Thomas S.</p>
-            <p class="testimonials__element--prof">Chief Operating Officer</p>
-          </div>  
-        </div>
-
-        <div class="testimonials__element">
-          <img src="images/image-jennie.jpg" alt="image-jennie">
-          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-          <div class="testimonials__element--text">
-            <p class="testimonials__element--name">Jennie F.</p>
-            <p class="testimonials__element--prof">Business Owner</p>
-          </div>
-        </div>
-      </div>
-    </article>
-    <div class="gallery">
-      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles">
-      <img src="images/desktop/image-gallery-orange.jpg" alt="image-gallery-orange">
-      <img src="images/desktop/image-gallery-cone.jpg" alt="image-gallery-cone">
-      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="image-gallery-sugarcubes">
-    </div>
   </main>
-  <footer>
-    <div class="footer-img-logo">
-      <img src="images/logo.svg" alt="logo" class="footer-img-logo__element">
-    </div>  
-    <ul>
-      <li><a href="">About</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Projects</a></li>
-    </ul>
-    <div class="list-socials">
-      <a href=""><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
-      <a href=""><img src="images/icon-instagram.svg" alt="icon-instagram"></a>
-      <a href=""><img src="images/icon-twitter.svg" alt="icon-twitter"></a>
-      <a href=""><img src="images/icon-pinterest.svg" alt="icon-pinterest"></a>
-    </div>
-  </footer>
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">José Alfredo Mário Dos Santos</a>.
-  </div>
+  </footer>
 </body>
-<script src="assets/javascript/script.js"></script>
 </html>
