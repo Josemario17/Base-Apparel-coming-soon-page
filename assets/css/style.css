@@ -34,7 +34,7 @@ body {
   min-width: 375px;
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  height: 98vh;
   background-color: hsl(217, 54%, 11%);
   font-family: Font;
   display: flex;
@@ -43,9 +43,14 @@ body {
   flex-direction: column;
   color: hsl(215, 51%, 70%);
 }
+@media (max-width: 900px) {
+  body {
+    height: 100vh;
+  }
+}
 
 main {
-  width: 22%;
+  width: 315px;
   height: 80%;
   background-color: hsl(216, 50%, 16%);
   border-radius: 14px;
@@ -58,7 +63,7 @@ main {
 }
 @media (max-width: 900px) {
   main {
-    width: 70%;
+    width: 60%;
     height: 70%;
     padding: 5%;
   }
@@ -119,9 +124,9 @@ h2 {
   color: hsl(0, 0%, 100%);
 }
 
-h2 + p {
-  width: 95%;
-  letter-spacing: 1.12px;
+a + p {
+  width: 98%;
+  letter-spacing: 1.32px;
   line-height: 22px;
 }
 
