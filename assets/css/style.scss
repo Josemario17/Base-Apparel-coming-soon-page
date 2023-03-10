@@ -60,7 +60,7 @@ header{
         background: url('../../images/mobile/image-header.jpg') no-repeat;
         background-size: cover;
         background-position: center;
-        margin-bottom: 0;
+        margin-bottom: 0; 
         position: relative;
         input:checked + nav{
             @include center(center, center);
