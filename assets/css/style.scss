@@ -37,11 +37,118 @@ body{
     width: 100%;
     max-width: 1440px;
     height: 100vh;
+<<<<<<< HEAD
     background-color: hsl(217, 54%, 11%);
     font-family: Font;
     @include center(center, center);
     flex-direction: column;
     color: hsl(215, 51%, 70%);
+=======
+    background-color: hsl(0, 0%, 100%);
+    font-family: Font2;
+}
+
+header{
+    width: 100%;
+    height: 100%;
+    background: url('../../images/desktop/image-header.jpg');
+    background-size: cover;
+    padding: 3%;
+    color: hsl(0, 0%, 100%);
+    @media ($max-desktop) {
+        background: url('../../images/mobile/image-header.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 0; 
+        position: relative;
+        input:checked + nav{
+            @include center(center, center);
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            right: 15%;
+            width: 75%;
+            height: 250px;
+            margin: 0 auto;
+            background-color: hsl(0, 0%, 100%);
+            color: hsl(200, 3%, 45%);
+            z-index: 50;
+        
+            ul{
+                @include center(center, center);
+                flex-direction: column;
+                gap: 35px;
+        
+                li:last-of-type a{
+                    padding: 15px 20px;
+                    background-color: hsl(51, 100%, 49%);
+                }
+            }
+        }
+    }
+}
+
+.block-top{
+    width: 100%;
+    @include center(space-between, center);
+    nav{
+        width: 50%;
+        font-family: Font1;
+        @include center(end, normal);
+        ul{
+            width: 75%;
+            li{
+                display: inline;
+                align-items: flex-end;
+                width: auto;
+                margin: 0 5%;
+            }
+            li:last-of-type a{
+                padding: 3.5% 6%;
+                border-radius: 30px;
+                color: hsl(212, 27%, 19%);
+                background-color: hsl(0, 0%, 100%);
+                text-transform: uppercase;
+                font-family: Font2;
+                font-weight: 800;
+
+                &:hover{
+                    background-color: #6fcefe;
+                    color: hsl(0, 0%, 100%);
+                }
+            }
+        }
+    }
+}
+
+.block-top__element{
+    width: 50%;
+    img{
+        width: 25%;
+        @media ($max-desktop) {
+            width: 50%;
+        }
+    }
+}
+
+header .block-top nav{
+    @media ($max-desktop) {
+        display: none;
+    }
+}
+
+.block-top__element--setoff-desktop{
+    display: none;
+    label{
+        cursor: pointer;
+    }
+    @media ($max-desktop) {
+        display: inline;
+        width: 30%;
+        @include center(center, center);
+    }
+    
+>>>>>>> new
 }
 
 
